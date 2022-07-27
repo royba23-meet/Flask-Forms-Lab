@@ -9,7 +9,16 @@
 
 </head>
 <body>
-
+    <a href="{{url_for('home')}}" style="text-decoration: none; color: black;">
+        <img src="{{url_for('static', filename='logo.png')}}" alt="logo" style="width:100px;">
+    </a>
+    <h1 style="color: white;">
+        {% if isFriend %}
+        You are friends with {{friend}}
+        {% else %}
+        You are not friends with {{friend}}
+        {% endif %}
+    </h1>
 
 
 </body>
