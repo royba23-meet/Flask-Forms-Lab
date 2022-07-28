@@ -11,13 +11,13 @@
 </head>
 <body>
 
-<form action="/" method="post" style="max-width:500px;margin:auto">
-  <h2>Login to Facebook</h2>
+<form action="/register" method="post" style="max-width:500px;margin:auto">
+  <h2>Register to Facebook</h2>
   <div style="max-width:500px;margin:auto">
     {% if wrong %}
     <h4 style="color: brown;">{{error}}</h4>
     {% endif %}
-  </div> <!-- end of error div -->
+  </div>
   <div class="input-container">
     <i class="fa fa-user icon"></i>
     <input class="input-field" type="text" placeholder="Username" name="username">
@@ -29,12 +29,9 @@
     <input class="input-field" type="password" placeholder="Password" name="password">
   </div>
 
-  <button type="submit" class="btn">Login</button>
+  <button type="submit" class="btn">Register</button>
 </form>
-<div style="max-width:500px;margin:auto">
-  <br>
-  <a href="{{url_for('register')}}">Not a member? Register Today.</a>
-</div>
+
 
 
 </body>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Login</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+
+</head>
+<body>
+
+<form action="/upload" method="post" style="max-width:500px;margin:auto" enctype="multipart/form-data">
+  <h2>Upload a file to Facebook</h2>
+  <div style="max-width:500px;margin:auto">
+    {% if wrong %}
+    <h4 style="color: brown;">{{error}}</h4>
+    {% endif %}
+  </div>
+  <div class="input-container">
+    <i class="fa fa-folder icon"></i>
+    <input class="input-field" type="file" name="file">
+  </div>
+
+  <button type="submit" class="btn">Upload</button>
+</form>
+
+
+</body>
+</html>
+
